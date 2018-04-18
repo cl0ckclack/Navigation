@@ -1,0 +1,27 @@
+<ion-content padding>
+  <!-- <div id="floating-panel2">
+    <button ion-button  (click)="addLine()">show</button>
+    <button ion-button  (click)="removeLine()">hide</button>
+  </div> -->
+    
+    <div id="floating-panel">
+      <ion-item>
+        <ion-label>ต้นทาง</ion-label>
+        <ion-select [(ngModel)]="start" name="start" >
+          <ion-option *ngFor="let arrData of arrData" value="{{arrData.name}}" >{{arrData.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>ปลายทาง</ion-label>
+        <ion-select [(ngModel)]="end" name="end">
+          <ion-option *ngFor="let arrData of arrData" value="{{arrData.name}}">{{arrData.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <button ion-button  (click)="calculateAndDisplayRoute()">ค้นหา</button>
+      <button ion-button  (click)="reset()">ล้าง</button>
+    </div>
+    
+    
+<div id="maps"></div>
+
+</ion-content>

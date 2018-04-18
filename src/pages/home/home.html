@@ -1,0 +1,42 @@
+<ion-content>  
+<ion-buttons end style="position: fixed;left: 85%;" >
+  <button  ion-button icon-only (click)="presentPopover($event)" round color="secondary" ><ion-icon name="ios-search"></ion-icon>
+  </button>
+  </ion-buttons>
+<!-- <div id="fab">
+    <ion-fab  top right edge bottom="" edge="" left="" style="top:-10px;bottom:0px;left:0px;right:-10px;" >
+            <button ion-fab mini color="royal2" style="bottom: 5px;left: 5px;" ion-button icon-only (click)="presentPopover($event)"><ion-icon name="ios-search"></ion-icon></button>
+
+            </ion-fab>
+      </div> -->
+
+  <div id="fab">
+<ion-fab  bottom left edge bottom="" edge="" left="" style="top:0px;bottom:-10px;left:-10px;right:0px;" >
+        <button ion-fab mini color="royal2" style="bottom: 5px;left: 5px;"><ion-icon name="arrow-dropup"></ion-icon></button>
+        <ion-fab-list side="top"  style="margin-bottom: 5px;margin-top: 0px;right: -80px;left: 10px;">
+          <p>
+            <input type="checkbox" name="checkbox" (click)="markercross()">  ทางแยก
+          </p>
+          <p>
+            <input type="checkbox" name="checkbox" (click)="markercarpark()">  ลานจอดรถ
+          </p>
+          <!-- <p>
+            <input type="checkbox" name="checkbox" (click)="markerbuilding()">  สถานที่ไหม่
+          </p> -->
+          <p>
+              <input type="checkbox" name="checkbox" (click)="markercanteen()">  โรงอาหาร
+          </p>
+          <p>
+            <input type="checkbox" name="checkbox" (click)="markerAtm()">  ตู้กดเงิน
+        </p>
+        </ion-fab-list>
+        </ion-fab>
+  </div>
+    
+      <div style="position: fixed;z-index: inherit;left: 58%;padding-top: 0px;padding-bottom: 0px;" id="text3" >
+        ระยะทาง:{{distanceText}}<br>
+        ระยะเวลา:{{durationText}}
+
+      </div>
+  <div id="map" data-tap-disabled="true"></div>
+</ion-content>
